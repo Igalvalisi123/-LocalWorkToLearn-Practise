@@ -24,24 +24,27 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })\
 
-export const loginUser = (email, password) =>
+
+
+  export const loginUser = (email,password) =>
   cy.session([email, password], () => {
     cy.request({
-      method: 'POST', url: `https://staging.clickup.com/auth/v1/login`, 
+      method: 'POST',
+      url: `https://staging.clickup.com/auth/v1/login`,
       failOnStatusCode: false,
-         headers: {
-          withCredentials: true,
-      },body: {
-          email,
-          password,
+      headers: {
+        
+        withCredentials: true,
+      },
+      body: {
+        email,
+        password,
       },
     }).then(({ body: { refresh_token, token } }) => {
       window.localStorage.setItem('refresh_token', refresh_token);
       window.localStorage.setItem('id_token', token);
       
-    });
-  });
+    })
+  })
 
-  Cypress.Commands.add('logincustom', (email , password) =>
-  loginUser(email, password).then(() => cy.visit('https://staging.clickup.com/login'))
-);
+
