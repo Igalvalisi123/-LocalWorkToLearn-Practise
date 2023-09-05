@@ -46,5 +46,13 @@
       
     })
   })
+  
 
+  Cypress.Commands.add('clickElement', (selector) => {
+    return cy.get(selector).click();
+  })
+ 
+  Cypress.Commands.add('visitLastUrlVisited',()=>{
+   return cy.visit('https://staging.clickup.com/login')
+  })
 
