@@ -13,7 +13,7 @@ describe ('globalActionBarV3',()=>{
     
     beforeEach(function(){
        const users = require('../../fixtures/userstologin.json')
-       loginUser(users.iagoCypressTest.user,users.iagoCypressTest.password)
+       headlessloginUser(users.iagoCypressTest.user,users.iagoCypressTest.password)
     })
 
     it.skip('clickupLogo',function(){ 
@@ -36,7 +36,7 @@ describe ('globalActionBarV3',()=>{
         cy.clickElement(globalActionBarV3.quickcreatebutton)
     })
   
-    it.skip ('quickActionButton',function(){
+    it.skip  ('quickActionButton',function(){
        
         cy.visitLastUrlVisited()    
         cy.wait(2000)
