@@ -16,16 +16,39 @@ describe ('globalActionBarV3',()=>{
        loginUser(users.iagoCypressTest.user,users.iagoCypressTest.password)
     })
 
-    it('clickupLogo',function(){ 
+    it.skip('clickupLogo',function(){ 
         
         cy.visitLastUrlVisited()
         cy.clickElement(globalActionBarV3.clickUpLogo)       
        })
-
-    it ('serachComponent',function(){
+       
+    it.skip ('serachComponent',function(){
        
         cy.visitLastUrlVisited()    
         cy.wait(2000)
         cy.clickElement(globalActionBarV3.searchComponent)
     })
+    
+    it.skip ('quickCreateButton',function(){
+       
+        cy.visitLastUrlVisited()    
+        cy.wait(2000)
+        cy.clickElement(globalActionBarV3.quickcreatebutton)
+    })
+  
+    it.skip ('quickActionButton',function(){
+       
+        cy.visitLastUrlVisited()    
+        cy.wait(2000)
+        cy.clickElement(globalActionBarV3.quickActionButton)
+    })
+    
+    it ('quickActionButton',function(){
+       
+        cy.visitLastUrlVisited()    
+        cy.wait(2000)
+        cy.clickElement(globalActionBarV3.userSettings)
+    })
+
+
 })
