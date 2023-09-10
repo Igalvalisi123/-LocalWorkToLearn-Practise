@@ -18,7 +18,7 @@ describe ('Home',()=>{
     it('Home',function(){
                 
         
-        loginUser(this.user.iagoCypressTest.user,this.user.iagoCypressTest.password)
+        cy.headLessloginUser(this.user.iagoCypressTest.user,this.user.iagoCypressTest.password)
 
         cy.visit('https://staging.clickup.com/login')        
        

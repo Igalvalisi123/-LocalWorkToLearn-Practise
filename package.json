@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/Igalvalisi123/cupractices#readme",
   "dependencies": {
-    "cypress": "^12.17.4"
+    "chai": "^4.3.8",
+    "cypress": "^12.17.4",
+    "mocha": "^10.2.0"
   }
 }

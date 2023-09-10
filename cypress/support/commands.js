@@ -26,7 +26,11 @@
 
 
 
-  export const loginUser = (email,password) =>
+
+
+
+
+Cypress.Commands.add ('headLessloginUser', (email,password) =>
   cy.session([email, password], () => {
     cy.request({
       method: 'POST',
@@ -45,14 +49,21 @@
       window.localStorage.setItem('id_token', token);
       
     })
-  })
+  }))
   
 
   Cypress.Commands.add('clickElement', (selector) => {
-    return cy.get(selector).click();
+    return cy.get(selector).click()
   })
  
   Cypress.Commands.add('visitLastUrlVisited',()=>{
    return cy.visit('https://staging.clickup.com/login')
   })
+
+
+  Cypress.Commands.add('element', (selector) => {
+    return cy.get(selector) 
+  })
+////////////////////////////ASSERTIONS//////////////////////////////////////////////// 
+
 

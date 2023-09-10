@@ -30,7 +30,7 @@ export const actionButton ={
           '[data-test="float-button_pinned-item_on-footer-time_tracking"]',
         timeTrackDurationInfo: '[data-test="time-tracker-group__info-duration"]',
         floatItem: (i) => `[data-test="float-button_item_${i}"]`,
-        noteName: (name: string) =>
+        noteName: (name) =>
           `[data-test="scratchpad-item__content_note-name ${name}"]`,
         locationNameForTaskSearch: (i) =>
           `[data-test="task-selector__mover-project-name-${i}"]`,
