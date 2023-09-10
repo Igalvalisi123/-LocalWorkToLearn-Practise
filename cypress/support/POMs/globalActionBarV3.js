@@ -1,11 +1,11 @@
 export const globalActionBarV3 = {
     clickUpLogo :  ('[class="cu-simple-bar__logo-img ng-star-inserted"]'),
-    searchComponent : ('[class="search-modal-toggle ng-tns-c1184051023-6"]'),
-    quickcreatebutton : ('[cupendoid="quick-create-new-task"]'),
+    searchComponent : ('[data-pendo="search-button"]'),
+    quickcreatebutton : ('[data-test="quick-create-modal-toggle-new-task"]'),
     quickActionButton : ('[data-test="apps-menu__quick-action-menu"]'),
-    userSettings : ('[_ngcontent-ng-c1202509958][cupendoid="user-settings-dropdown-toggle"]'),
+    userSettings : ('[data-pendo="user-settings-dropdown-toggle"]'),
     seachComponentModal : {
-        searchOrRunACommand : ('[class="Input-root-Jasbq Input-rootEmpty-gdDcH"]'),
+        searchOrRunACommand : ('[data-test="command-bar__input"]'),
         searchDifferentTabs : ('[class="Tabs-root-dDM5g"]')
 
     }
